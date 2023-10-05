@@ -6,92 +6,87 @@ package model;
 
 /**
  *
- * @author admin
+ * @author This PC
  */
 public class Contact {
-    protected int Id;
-    protected String Name;
-//    protected String Fname;
-//    protected String Lname;
-    protected String Group;
-    protected String Address;
-    protected String Phone;
+    
+    private int ID;
+    private String fullName;
+    private String group;
+    private String address;
+    private String phone;
+    private String lastName;
+    private String firstName;
+    
+    public Contact(){}
 
-    public Contact() {
+    public Contact(int ID, String fullName, String group, String address, String phone, String lastName, String firstName) {
+        this.ID = ID;
+        this.fullName = fullName;
+        this.group = group;
+        this.address = address;
+        this.phone = phone;
+        this.lastName = lastName;
+        this.firstName = firstName;
     }
 
-    public Contact( String Name, String Group, String Address, String Phone) {
-        this.Id = 1;
-        this.Name = Name;
-//        this.Fname = Fname;
-//        this.Lname = Lname;
-        this.Group = Group;
-        this.Address = Address;
-        this.Phone = Phone;
+    public int getID() {
+        return ID;
     }
 
-    public int getId() {
-        return Id;
+    public void setID(int ID) {
+        this.ID = ID;
     }
 
-    public void setId(int Id) {
-        this.Id = Id;
+    public String getFullName() {
+        return fullName;
     }
 
-    public String getName() {
-        return Name;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
-
-    public void setName(String Name) {
-        this.Name = Name;
-    }
-
-//    public String getFname() {
-//        return Fname;
-//    }
-//
-//    public void setFname(String Fname) {
-//        this.Fname = Fname;
-//    }
-//
-//    public String getLname() {
-//        return Lname;
-//    }
-//
-//    public void setLname(String Lname) {
-//        this.Lname = Lname;
-//    }
 
     public String getGroup() {
-        return Group;
+        return group;
     }
 
-    public void setGroup(String Group) {
-        this.Group = Group;
+    public void setGroup(String group) {
+        this.group = group;
     }
 
     public String getAddress() {
-        return Address;
+        return address;
     }
 
-    public void setAddress(String Address) {
-        this.Address = Address;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getPhone() {
-        return Phone;
+        return phone;
     }
 
-    public void setPhone(String Phone) {
-        this.Phone = Phone;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
-    @Override
-    public String toString() {
-        return Id + "  " + Name + "    " + Group + "    " + Address + "    " + Phone;
+    public String getLastName() {
+        return lastName;
     }
 
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
     
-    
-        
+    public String toString(){
+        return String.format("%s %12s %8s %15s %12s %11s %14s", getID(), getFullName(), getFirstName(), getLastName(), getGroup(), getAddress(), getPhone());
+    }
 }

@@ -5,13 +5,87 @@
 package main;
 
 import controller.ManagerContact;
+import view.Menu;
 
 /**
  *
- * @author admin
+ * @author This PC
  */
 public class Main {
     public static void main(String[] args) {
-        new ManagerContact().run();
+        String title= "Contact Program";
+        String[] s= new String[] {"Add a Contact", "Display all Contact", "Delete a Contact", "Exit"};
+        Menu<String> menu= new ManagerContact(title, s);
+        menu.run();
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
